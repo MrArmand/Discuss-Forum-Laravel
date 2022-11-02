@@ -9,7 +9,7 @@ class Network extends Model
 {
     use HasFactory;
     
-    public function person(){
-        return $this->belongsTo(Person::class);
+    public function people(){
+        return $this->belongsToMany(Person::class);
     }
 }
