@@ -20,5 +20,7 @@ class PersonTableSeeder extends Seeder
         $p->name = "Armand";
         $p->surname = "Dorosz";
         $p->save();
+
+        Person::factory()->count(50)->create();
     }
 }
