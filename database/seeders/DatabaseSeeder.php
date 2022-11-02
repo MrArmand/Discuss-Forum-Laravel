@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(PersonTableSeeder::class);
+        $this->call(NetworkSeeder::class);
     }
 }
