@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('networks', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
+            $table->string('content');
 
             $table->bigInteger('person_id')->references('id')->on('people')
                 ->onDelete('cascade')->onUpdate('cascade');
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('networks');
+        Schema::dropIfExists('posts');
     }
 };

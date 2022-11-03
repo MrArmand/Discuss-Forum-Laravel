@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Network;
+use App\Models\Post;
 
-class NetworkSeeder extends Seeder
+class PostSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,8 +15,9 @@ class NetworkSeeder extends Seeder
      */
     public function run()
     {
-        $n = new Network;
-        $n->name = "Sean";
+        //Hard code one post
+        $n = new Post;
+        $n->content = "amogus";
         $n->person_id = 1;
         $n->save();
     }
