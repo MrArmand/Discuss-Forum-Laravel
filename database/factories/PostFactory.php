@@ -16,8 +16,10 @@ class PostFactory extends Factory
      */
     public function definition()
     {
+
         return [
             'content' => fake()->sentence($nbWords = 6, $variableNbWords = true),
+
         ];
     }
 }
