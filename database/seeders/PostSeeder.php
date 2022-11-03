@@ -20,5 +20,7 @@ class PostSeeder extends Seeder
         $n->content = "amogus";
         $n->person_id = 1;
         $n->save();
+
+        Post::factory()->count(50)->create();
     }
 }
