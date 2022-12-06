@@ -14,6 +14,9 @@ class PersonTableSeeder extends Seeder
      *
      * @return void
      */
+
+   
+
     public function run()
     {
         //Create one hardcoded person
@@ -22,6 +25,11 @@ class PersonTableSeeder extends Seeder
         $p->surname = "Dorosz";
         $p->save();
 
-        Person::factory()->has(Post::factory()->count(3))->count(50)->create();
+        //Number of people
+        $n = 50;
+        
+        for ($i=0; $i < $n; $i++){
+        Person::factory()->has(Post::factory()->count(fake()->numberBetween(1,3)))->create();
+        }
     }
 }

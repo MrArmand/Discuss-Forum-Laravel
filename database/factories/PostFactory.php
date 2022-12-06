@@ -19,7 +19,7 @@ class PostFactory extends Factory
 
         return [
             'content' => fake()->sentence($nbWords = 6, $variableNbWords = true),
-
+            
         ];
     }
 }
