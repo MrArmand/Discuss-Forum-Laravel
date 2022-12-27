@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('content');
 
-            $table->bigInteger('person_id')->references('id')->on('people')
+            $table->bigInteger('user_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
 
         });

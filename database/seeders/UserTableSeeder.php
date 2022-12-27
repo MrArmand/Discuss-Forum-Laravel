@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Person;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Post;
 
-class PersonTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,16 +20,16 @@ class PersonTableSeeder extends Seeder
     public function run()
     {
         //Create one hardcoded person
-        $p = new Person;
+        $p = new User;
         $p->name = "Armand";
         $p->surname = "Dorosz";
         $p->save();
 
-        //Number of people
+        //Number of users
         $n = 50;
         
         for ($i=0; $i < $n; $i++){
-        Person::factory()->has(Post::factory()->count(fake()->numberBetween(1,3)))->create();
+        User::factory()->has(Post::factory()->count(fake()->numberBetween(1,3)))->create();
         }
     }
 }
