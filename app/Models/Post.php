@@ -10,6 +10,6 @@ class Post extends Model
     use HasFactory;
     
     public function people(){
-        return $this->belongsTo(Person::class);
+        return $this->belongsTo(User::class);
     }
 }
