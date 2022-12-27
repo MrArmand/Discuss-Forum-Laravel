@@ -18,7 +18,7 @@ class PostSeeder extends Seeder
         //Hard code one post
         $n = new Post;
         $n->content = "amogus";
-        $n->person_id = 1;
+        $n->user_id = 1;
         $n->save();
 
     }
