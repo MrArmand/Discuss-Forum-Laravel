@@ -21,6 +21,10 @@ Route::get('/home', function () {
     return "This is /home page!";
 });
 
+Route::get('user/{name?}', function ($name = null) {
+    return $name;
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
