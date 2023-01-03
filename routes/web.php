@@ -17,15 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', [PostController::class, 'index']);
-
 Route::get('user/{name?}', function ($name = null) {
     return $name;
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 require __DIR__.'/auth.php';
 
