@@ -18,8 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return "This is /home page!";
-});
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::get('user/{name?}', function ($name = null) {
     return $name;
