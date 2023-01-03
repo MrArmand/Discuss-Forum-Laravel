@@ -1,454 +1,85 @@
-  </div>
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="#" class="breadcrumb-item active"> Dashboard</a>
-      </nav>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="row">
-            <!-- Category one -->
-            <div class="col-lg-12">
-              <!-- second section  -->
-              <h4 class="text-white bg-info mb-0 p-4 rounded-top">
-                Forum Category
-              </h4>
-              <table
-                class="table table-striped table-responsive table-bordered"
-              >
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Forum</th>
-                    <th scope="col">Topics</th>
-                    <th scope="col">Posts</th>
-                    <th scope="col">Latest Post</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        <title>Laravel</title>
 
-            <!-- Category two -->
-            <div class="col-lg-12">
-              <!-- second section  -->
-              <h4 class="text-white bg-danger mb-0 p-4 rounded-top">
-                Forum Category
-              </h4>
-              <table
-                class="table table-striped table-responsive table-bordered"
-              >
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Forum</th>
-                    <th scope="col">Topics</th>
-                    <th scope="col">Posts</th>
-                    <th scope="col">Latest Post</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-            <!-- Category three -->
-            <div class="col-lg-12">
-              <!-- second section  -->
-              <h4 class="text-white bg-warning mb-0 p-4 rounded-top">
-                Forum Category
-              </h4>
-              <table
-                class="table table-striped table-responsive table-bordered"
-              >
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Forum</th>
-                    <th scope="col">Topics</th>
-                    <th scope="col">Posts</th>
-                    <th scope="col">Latest Post</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="h5">
-                        <a href="#" class="text-uppercase">Forum name</a>
-                      </h3>
-                      <p class="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta, laboriosam.
-                      </p>
-                    </td>
-                    <td><div>5</div></td>
-                    <td><div>20</div></td>
-                    <td>
-                      <h4 class="h6 font-weight-bold mb-0">
-                        <a href="#">Post name</a>
-                      </h4>
-                      <div><a href="#">Author name</a></div>
-                      <div>06/07/ 2021 20:04</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <aside>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Members Online</h4>
-                <ul class="list-unstyled mb-0">
-                  <li><a href="#">Member name</a></li>
-                  <li><a href="#">Member name</a></li>
-                  <li><a href="#">Member name</a></li>
-                  <li><a href="#">Member name</a></li>
-                  <li><a href="#">Member name</a></li>
-                </ul>
-              </div>
-              <div class="card-footer">
-                <dl class="row">
-                  <dt class="col-8 mb-0">Total:</dt>
-                  <dd class="col-4 mb-0">10</dd>
-                </dl>
-                <dl class="row">
-                  <dt class="col-8 mb-0">Members:</dt>
-                  <dd class="col-4 mb-0">10</dd>
-                </dl>
-                <dl class="row">
-                  <dt class="col-8 mb-0">Guests:</dt>
-                  <dd class="col-4 mb-0">3</dd>
-                </dl>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Members Statistics</h4>
-                <dl class="row">
-                  <dt class="col-8 mb-0">Total Forums:</dt>
-                  <dd class="col-4 mb-0">15</dd>
-                </dl>
-                <dl class="row">
-                  <dt class="col-8 mb-0">Total Topics:</dt>
-                  <dd class="col-4 mb-0">500</dd>
-                </dl>
-                <dl class="row">
-                  <dt class="col-8 mb-0">Total members:</dt>
-                  <dd class="col-4 mb-0">200</dd>
-                </dl>
-              </div>
-              <div class="card-footer">
-                <div>Newest Member</div>
-                <div><a href="#">Member Name</a></div>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </div>
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Raleway';
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+            .full-height {
+                height: 100vh;
+            }
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+            .position-ref {
+                position: relative;
+            }
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+            .content {
+                text-align: center;
+            }
+            .title {
+                font-size: 84px;
+            }
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
 
-
-
-
-
-
-
-
-
-
-
-<!-- @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+            @if (Route::has('login') && Auth::check())
+                <div class="top-right links">
+                    <a href="{{ url('/login') }}">Log Out
+                    </a>
+                </div>
+            @elseif (Route::has('login') && !Auth::check())
+                <div class="top-right links">
+                    <a href="{{ url('/login') }}">Login</a>
+                    <a href="{{ url('/register') }}">Register</a>
                 </div>
             @endif
 
+            <div class="content">
+                <div class="title m-b-md">
+                    Disscussion forum
+                </div>
+
+                <div class="links">
+                    <a href="/dashboard">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

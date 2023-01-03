@@ -10,6 +10,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
@@ -17,25 +21,26 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<div class="container-fluid">
+      <!-- First section -->
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+          <h1>
+            <a href="#" class="navbar-brand">Forum</a>
+          </h1>
+          <form action="#" class="form-inline mr-3 mb-2 mb-sm-0">
+            <input type="text" class="form-control" placeholder="search" />
+            <button type="submit" class="btn btn-success">Search Forum</button>
+          </form>
+        </div>
+      </nav>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
+      <!-- first section end -->
+    </div>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="#" class="breadcrumb-item active"> Dashboard</a>
+      </nav>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -76,5 +81,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
