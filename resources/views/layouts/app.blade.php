@@ -21,8 +21,9 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
+
+  <!-- Header -->
 <div class="container-fluid">
-      <!-- First section -->
       <nav class="navbar navbar-dark bg-dark">
         <div class="container">
           <h1>
@@ -35,7 +36,7 @@
         </div>
       </nav>
 
-      <!-- first section end -->
+      <!-- Dashboard panel -->
     </div>
     <div class="container">
       <nav class="breadcrumb">
@@ -59,6 +60,8 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Footer -->
     <div class="container-fluid">
       <footer class="small bg-dark text-white">
         <div class="container py-4">
