@@ -81,6 +81,19 @@
             @yield('content')
         </main>
     </div>
+    <div class="container-fluid">
+      <footer class="small bg-dark text-white">
+        <div class="container py-4">
+          <ul class="list-inline mb-0 text-center">
+            <li class="list-inline-item">
+              &copy; 2023 Disscussion forum
+            </li>
+            <li class="list-inline-item">All rights reserved</li>
+            <li class="list-inline-item">Terms and privacy policy</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
