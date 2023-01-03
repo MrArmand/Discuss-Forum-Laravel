@@ -14,36 +14,61 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-</head>
-<body>
 
-  <!-- Header -->
-<div class="container-fluid">
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
-          <h1>
-            <a href="#" class="navbar-brand">Forum</a>
-          </h1>
-          <form action="#" class="form-inline mr-3 mb-2 mb-sm-0">
-            <input type="text" class="form-control" placeholder="search" />
-            <button type="submit" class="btn btn-success">Search Forum</button>
-          </form>
-        </div>
-      </nav>
-
-      <!-- Dashboard panel -->
-    </div>
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="#" class="breadcrumb-item active"> Dashboard</a>
-      </nav>
-
-                        
+     <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #1e2122;
+                font-family: 'Nunito';
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+            .full-height {
+                height: 100vh;
+            }
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+            .position-ref {
+                position: relative;
+            }
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+            .content {
+                text-align: center;
+            }
+            .title {
+                font-size: 84px;
+            }
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+  
             @if (Route::has('login') && Auth::check())
                 <div class="top-right links">
                     <a href="{{ url('/logout') }}">Log Out
@@ -55,26 +80,12 @@
                     <a href="{{ url('/register') }}">Register</a>
                 </div>
             @endif
+    
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
 
-    <!-- Footer -->
-    <div class="container-fluid">
-      <footer class="small bg-dark text-white">
-        <div class="container py-4">
-          <ul class="list-inline mb-0 text-center">
-            <li class="list-inline-item">
-              &copy; 2023 Disscussion forum
-            </li>
-            <li class="list-inline-item">All rights reserved</li>
-            <li class="list-inline-item">Terms and privacy policy</li>
-          </ul>
-        </div>
-      </footer>
-    </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
