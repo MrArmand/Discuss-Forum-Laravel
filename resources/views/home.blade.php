@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -20,4 +21,12 @@
         </div>
     </div>
 </div>
+
+<p>Dashboard</p>
+    <ul>
+        @foreach ($posts as $post)
+            <li>{{$post -> content}}</li>
+            
+        @endforeach
+
 @endsection
