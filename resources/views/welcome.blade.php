@@ -57,11 +57,12 @@
         </style>
     </head>
     <body>
+        
         <div class="flex-center position-ref full-height">
 
             @if (Route::has('login') && Auth::check())
                 <div class="top-right links">
-                    <a href="{{ url('/login') }}">Log Out
+                    <a href="{{ url('/logout') }}">Log Out
                     </a>
                 </div>
             @elseif (Route::has('login') && !Auth::check())

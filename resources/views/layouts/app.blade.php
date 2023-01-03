@@ -41,6 +41,8 @@
       <nav class="breadcrumb">
         <a href="#" class="breadcrumb-item active"> Dashboard</a>
       </nav>
+
+      @yield('content')
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
