@@ -15,18 +15,12 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'content' => 'required|max:1000',
-            'id' => 'required|numerical',
-        ]);
 
         $p = new Post;
-        $p->content = $validatedData['content'];
-        $p->user_id = $validatedData['id'];
+        $p->content = $request->description;
+        $p->user_id = auth()->user()->id;
         $p->save();
 
-        session()->flash('message', 'Post added to the dashboard.');
-
-        return redirect()->route('dashboard');
+        return redirect('dashboard')->with('message', 'Post added to the dashboard.');
     }
 }
