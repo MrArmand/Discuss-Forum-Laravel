@@ -21,7 +21,7 @@
                     <div class="card-body">
                     
                     {{ __($post->content) }}
-
+                        
                     <nav class="">
                         <div class="container">
                             <div class="card">
