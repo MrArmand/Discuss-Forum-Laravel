@@ -18,8 +18,4 @@ class Post extends Model
         return $user->name;
 
     }
-
-    public function liked(){
-        return 1;
-    }
 }
