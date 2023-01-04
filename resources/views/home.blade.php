@@ -31,8 +31,14 @@
                             
                             {{ __($comment->content) }} --}}
 
-                    <div class="top-right links">
-                        <a href="{{route('home')}}">Comment</a>
+
+                    <nav class="breadcrumb">
+                    <div class="container">
+                    <div class="breadcrumb-item active">
+                        <a href="{{route('home')}}">Comment</a>/
+                        
+                        <a href="{{route('home')}}"><livewire:counter /></a>
+                        </div>
                     </div>
                 </div>
             </div>
