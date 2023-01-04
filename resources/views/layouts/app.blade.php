@@ -22,6 +22,7 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
      <!-- Styles -->
+     @livewireStyles
         <style>
             html, body {
                 background-color: #fff;
@@ -69,6 +70,8 @@
     </head>
     <body>
   
+        @livewireScripts
+
             @if (Route::has('login') && Auth::check())
                 <div class="top-right links">
                     <a href="{{ url('/logout') }}">Log Out
