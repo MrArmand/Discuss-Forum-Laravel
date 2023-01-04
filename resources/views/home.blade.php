@@ -20,34 +20,44 @@
                 <div class="card-header"><a href="/user/{{$post->user_id}}">{{$post -> username($post->user_id)}}</a></div>
                     <div class="card-body">
                     
+                    
                     {{ __($post->content) }}
                         
+                    @if ($post->comment)
                     <nav class="">
                         <div class="container">
                             <div class="card">
                                 <div class="card-body">
                     
-                                {{ __($post->content) }}
+                                {{ __($post->comment->content) }}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endif
 
 
+                <meta name="csrf-token" content="{{ csrf_token() }}">
                         <nav class="breadcrumb">
                             <div class="container">
-                        <div class="form-group">
-                            <label>Comment</label>
-                            <textarea name="description" class="form-control" required=""></textarea>
-                          </div>
+                                @if(session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                          @endif
+                          <form method="POST" action="{{ route('comments.store') }}">
+                            
+                            @csrf
+                            <div class="form-group">
+                               <label>Comment</label>
+                               <textarea name="description" class="form-control" required=""></textarea>
+                            </div>
                           <div class="right">
                           <button type="submit" class="btn">Submit</button>
                           </div>
                           
-                        </form>
-                        
-                        
+                        </form>                       
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,11 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::post('/dash',[CommentController::class, 'store'])->name('comments.store');
+
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/post/create',[PostController::class, 'create'])->name('posts.create');
 Route::post('/dashboard',[PostController::class, 'store'])->name('posts.store');
+
 
 Route::get('user/{name?}', [ProfileController::class, 'show']);
 
