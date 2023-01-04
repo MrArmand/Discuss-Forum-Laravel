@@ -12,4 +12,14 @@ class Post extends Model
     public function users(){
         return $this->belongsTo(User::class);
     }
+
+    public function username($id){
+        $user = User::find($id);
+        return $user->name;
+
+    }
+
+    public function liked(){
+        return 1;
+    }
 }

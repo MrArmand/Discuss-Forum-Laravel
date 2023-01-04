@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::get();
-        $users = User::get();
-        return view('home', ['posts' => $posts], ['users' => $users]);
+        return view('home', ['posts' => $posts]);
     }
+
 }

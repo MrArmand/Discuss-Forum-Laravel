@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,10 @@ Route::get('/', function () {
 });
 
 Route::get('user/{name?}', [ProfileController::class, 'show']);
+
+Route::get('/post-list',[PostController::class,'postList'])->name('post.list');
+Route::post('/like-post/{id}',[PostController::class,'likePost'])->name('like.post');
+Route::post('/unlike-post/{id}',[PostController::class,'unlikePost'])->name('unlike.post');
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 
