@@ -3,8 +3,27 @@
 @section('content')
 
     <ul>
-        <li>Name: {{$user->name}}</li>
+        <label>{{$user->name}}</label>
 
-    </ul>
+        <div class="row justify-content-center">
+            <a href="{{route('dashboard')}}">Back</a>
+        </div>
+        @foreach ($posts as $post)
 
+  <div class="container px-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">{{$post -> username($post->user_id)}}</a></div>
+                <div class="card-body">
+                    
+                    {{ __($post->content) }}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
+@endforeach 
 @endsection

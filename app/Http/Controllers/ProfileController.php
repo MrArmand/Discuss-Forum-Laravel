@@ -46,8 +46,9 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
+        $posts = User::find($id)->posts;
         $user = User::findOrFail($id);
-        return view('profiles.show', ['user' => $user]);
+        return view('profiles.show', ['user' => $user], ['posts' => $posts]);
     }
 
     /**
