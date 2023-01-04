@@ -48,6 +48,9 @@
                 right: 10px;
                 top: 18px;
             }
+            .right {
+                text-align: right;
+            }
             .content {
                 text-align: center;
             }

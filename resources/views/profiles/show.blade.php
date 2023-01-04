@@ -10,7 +10,7 @@
         </div>
         @foreach ($posts as $post)
 
-  <div class="container px-4">
+  <div class="container px-10">
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
