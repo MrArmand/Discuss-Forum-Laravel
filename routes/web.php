@@ -19,16 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/post/create',[PostController::class, 'create'])->name('posts.create');
+Route::post('/dashboard',[PostController::class, 'store'])->name('posts.store');
+
 Route::get('user/{name?}', [ProfileController::class, 'show']);
-
-Route::get('/post-list',[PostController::class,'postList'])->name('post.list');
-Route::post('/like-post/{id}',[PostController::class,'likePost'])->name('like.post');
-Route::post('/unlike-post/{id}',[PostController::class,'unlikePost'])->name('unlike.post');
-
-Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 
 require __DIR__.'/auth.php';
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+

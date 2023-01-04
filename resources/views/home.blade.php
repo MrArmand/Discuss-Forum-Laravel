@@ -9,6 +9,8 @@
     <a href="#" class="breadcrumb-item active"> News</a>
   </nav>
 
+  <a href="{{ route('posts.create')}}">Create post</a>
+
   @foreach ($posts as $post)
   
   <div class="container">
