@@ -35,8 +35,15 @@
                     <nav class="breadcrumb">
                     <div class="container">
                     <div class="breadcrumb-item active">
-                        <a href="{{route('home')}}">Comment</a>/
-                        
+                    
+                        <div class="form-group">
+                            <label>Comment</label>
+                            <textarea name="description" class="form-control" required=""></textarea>
+                          </div>
+                          <button type="submit" class="btn">Submit</button>
+                          </div>
+                        </form>
+                        <div class="top-right">
                         <a href="{{route('home')}}"><livewire:counter /></a>
                         </div>
                     </div>
