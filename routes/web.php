@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('user/{name?}', function ($name = null) {
-    return $name;
-});
+Route::get('user/{name?}', [ProfileController::class, 'show']);
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 

@@ -19,6 +19,7 @@ class PostSeeder extends Seeder
         $n = new Post;
         $n->content = "amogus";
         $n->user_id = 1;
+        $n->post_id = 1;
         $n->save();
 
     }
