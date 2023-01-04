@@ -18,18 +18,21 @@
         <div class="col">
             <div class="card">
                 <div class="card-header"><a href="/user/{{$post->user_id}}">{{$post -> username($post->user_id)}}</a></div>
-                <div class="card-body">
+                    <div class="card-body">
                     
                     {{ __($post->content) }}
 
-                    <nav class="breadcrumb">
-                    <div class="container">
-                    
-                        <div class="card">
-                            <div class="card-body">
+                    <nav class="">
+                        <div class="container">
+                            <div class="card">
+                                <div class="card-body">
                     
                                 {{ __($post->content) }}
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
 
 
                         <nav class="breadcrumb">
@@ -43,6 +46,7 @@
                           </div>
                           
                         </form>
+                        
                         
                     </div>
                 </div>
