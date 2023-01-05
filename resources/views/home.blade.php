@@ -23,19 +23,11 @@
                     
                     {{ __($post->content) }}
                         
-                    @if ($post->comment)
-                    <nav class="">
-                        <div class="container">
-                            <div class="card">
-                                <div class="card-body">
+                    @include('posts.commentsDisplay', ['comments' => $post->comments, 'post_id' => $post->id])
                     
-                                {{ __($post->comment->content) }}
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                @endif
+                
 
 
                 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -46,6 +38,7 @@
                                 {{ session('status') }}
                             </div>
                           @endif
+
                           <form method="POST" action="{{ route('comments.store') }}">
                             
                             @csrf
@@ -56,7 +49,6 @@
                           <div class="right">
                           <button type="submit" class="btn">Submit</button>
                           </div>
-                          
                         </form>                       
                     </div>
                 </div>

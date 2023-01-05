@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('content');
             $table->bigInteger('user_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
+            $table->softDeletes();
 
         });
     }

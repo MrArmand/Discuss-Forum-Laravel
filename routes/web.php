@@ -20,6 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware('auth')->group(function(){
 
 Route::post('/dash',[CommentController::class, 'store'])->name('comments.store');
 
@@ -29,9 +30,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/post/create',[PostController::class, 'create'])->name('posts.create');
 Route::post('/dashboard',[PostController::class, 'store'])->name('posts.store');
 
-
 Route::get('user/{name?}', [ProfileController::class, 'show']);
-
+});
 require __DIR__.'/auth.php';
 
 Auth::routes();
