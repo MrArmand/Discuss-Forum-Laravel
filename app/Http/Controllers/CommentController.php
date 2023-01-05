@@ -36,9 +36,12 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $input = $request->all();
-        $input['user_id'] = auth()->user()->id;
+        $c = new Comment;
+        $c->content = $request -> content;
+        $c->user_id = auth()->user()->id;
+        $c->post_id = $request -> post_id;
+        $c->save();
+
 
         return redirect('dashboard')->with('message', 'Comment added to the dashboard.');
     }

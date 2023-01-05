@@ -26,6 +26,10 @@ class Comment extends Model
      * @var array
      */
     public function users(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function posts(){
         return $this->belongsTo(Post::class);
     }
 

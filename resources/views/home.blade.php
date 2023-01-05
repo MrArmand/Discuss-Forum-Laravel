@@ -19,12 +19,23 @@
             <div class="card">
                 <div class="card-header"><a href="/user/{{$post->user_id}}">{{$post -> username($post->user_id)}}</a></div>
                     <div class="card-body">
+                     
+                    {{ __($post->id) }}
+
+                    @if($post->comment != null)
+                    @foreach($post->comment as $comment)
+                    <nav class="">
+                        <div class="container">
+                            <div class="card">
+                                <div class="card-body">
                     
-                    
-                    {{ __($post->content) }}
-                        
-                    @include('posts.commentsDisplay', ['comments' => $post->comments, 'post_id' => $post->id])
-                    
+                                    
+                                    {{($post->commentDisplay($post->id))}}
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    @endif
                     </div>
                 </div>
                 
@@ -44,7 +55,9 @@
                             @csrf
                             <div class="form-group">
                                <label>Comment</label>
-                               <textarea name="description" class="form-control" required=""></textarea>
+                               {{-- <textarea name="description" class="form-control" required=""></textarea> --}}
+                               <input type="text" name="content" class="form-control" required=""/>
+                                <input type="hidden" name="post_id" value="{{ $post->id }}" />
                             </div>
                           <div class="right">
                           <button type="submit" class="btn">Submit</button>
