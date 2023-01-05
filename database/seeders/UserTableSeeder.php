@@ -27,7 +27,7 @@ class UserTableSeeder extends Seeder
         $p->save();
 
         //Number of users
-        $n = 0;
+        $n = 10;
         
         for ($i=0; $i < $n; $i++){
         User::factory()->has(Post::factory()->count(fake()->numberBetween(1,3)))->create();

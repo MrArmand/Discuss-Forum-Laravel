@@ -28,7 +28,7 @@
                         <div class="container">
                             <div class="card">
                                 <div class="card-body">
-                    
+                                    <div class="card-header"><a href="/user/{{$comment->user_id}}">{{$post -> username($comment->user_id)}}</a></div>
                                     {{($comment->content)}}
                                 </div>
                             </div>
