@@ -20,7 +20,7 @@
                 <div class="card-header"><a href="/user/{{$post->user_id}}">{{$post -> username($post->user_id)}}</a></div>
                     <div class="card-body">
                      
-                    {{ __($post->id) }}
+                    {{ __($post->content) }}
 
                     @if($post->comments != null)
                     @foreach($post->comments as $comment)
@@ -29,7 +29,7 @@
                             <div class="card">
                                 <div class="card-body">
                     
-                                    {{($post->commentDisplay($post->id))}}
+                                    {{($comment->content)}}
                                 </div>
                             </div>
                         </div>
