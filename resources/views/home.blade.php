@@ -22,14 +22,13 @@
                      
                     {{ __($post->id) }}
 
-                    @if($post->comment != null)
-                    @foreach($post->comment as $comment)
+                    @if($post->comments != null)
+                    @foreach($post->comments as $comment)
                     <nav class="">
                         <div class="container">
                             <div class="card">
                                 <div class="card-body">
                     
-                                    
                                     {{($post->commentDisplay($post->id))}}
                                 </div>
                             </div>
