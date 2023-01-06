@@ -13,6 +13,12 @@ class PostController extends Controller
         return view('posts.create');
     }
 
+    public function edit($id)
+    {
+        $post = Post::findOrFail($id);
+        return view('posts.edit', ['post' => $post]);
+    }
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -26,10 +32,19 @@ class PostController extends Controller
         return redirect('dashboard')->with('message', 'Post added to the dashboard.');
     }
 
-    public function update(Post $post, Request $request)
-    {
-        
+    public function update($id){
 
+
+        request()->validate([
+            'content' => 'required'
+        ]);
+    
+
+        Post::find($id)->update([
+           'content' => request('content')
+        ]);
+
+        return redirect('dashboard')->with('message', 'Post has been edited.');
     }
 
     public function destroy(Request $request)

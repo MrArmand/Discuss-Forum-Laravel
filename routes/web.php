@@ -28,12 +28,15 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/post/create',[PostController::class, 'create'])->name('posts.create');
 Route::post('/dashboard',[PostController::class, 'store'])->name('posts.store');
 Route::delete('/post/destroy',[PostController::class, 'destroy'])->name('posts.destroy');
+Route::patch('/post/edited/{id?}', [PostController::class, 'update']);
+
 
 Route::post('/comments/add',[CommentController::class, 'store'])->name('comments.store');
 Route::delete('/comment/destroy', [CommentController::class, 'destroy'])->name('comments.destroy');
 
 
 
+Route::get('/post/edit/{id?}', [PostController::class, 'edit']);
 Route::get('user/{name?}', [ProfileController::class, 'show']);
 });
 require __DIR__.'/auth.php';
