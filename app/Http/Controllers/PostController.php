@@ -16,10 +16,10 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'description' => 'required|max:10000'
+            'content' => 'required|max:10000'
         ]);
         $p = new Post;
-        $p->content = $validatedData['description'];
+        $p->content = $validatedData['content'];
         $p->user_id = auth()->user()->id;
         $p->save();
 

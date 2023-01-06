@@ -60,7 +60,6 @@
                             @csrf
                             <div class="form-group">
                                <label>Comment</label>
-                               {{-- <textarea name="description" class="form-control" required=""></textarea> --}}
                                <input type="text" name="content" class="form-control" required="" />
                                 <input type="hidden" name="post_id" value="{{ $post->id }}" />
                             </div>

@@ -24,7 +24,7 @@
         
         <div class="form-group">
           <label>Description</label>
-          <textarea name="description" class="form-control" required=""></textarea>
+          <textarea name="content" class="form-control" required=""></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <div align='right'>
