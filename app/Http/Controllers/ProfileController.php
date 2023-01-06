@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Post;
 class ProfileController extends Controller
 {
     /**
@@ -46,8 +47,9 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        $posts = User::find($id)->posts;
+        $posts = Post::get();
         $user = User::findOrFail($id);
+        
         return view('profiles.show', ['user' => $user], ['posts' => $posts]);
     }
 
