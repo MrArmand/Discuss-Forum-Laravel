@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#"class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">&raquo;</a>
+    </div>
     @foreach ($posts as $post)
         <div class="container">
             <div class="row justify-content-center">
