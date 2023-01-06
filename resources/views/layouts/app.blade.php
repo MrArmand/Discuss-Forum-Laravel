@@ -103,7 +103,7 @@
 
 
     @if ($errors->any())
-        <div>
+        <div class="content links">
             Errors:
             <ul>
                 @foreach ($errors->all() as $error)
