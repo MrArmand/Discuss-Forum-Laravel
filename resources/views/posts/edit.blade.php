@@ -10,6 +10,9 @@
     </head>
 
     <body>
+        <div class="row justify-content-center">
+            <a href="{{ route('dashboard') }}">Back</a>
+        </div>
         <div class="container mt-4">
             @if (session('status'))
                 <div class="alert alert-success">

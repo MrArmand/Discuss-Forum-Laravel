@@ -103,7 +103,7 @@
     @if (Route::has('login') && Auth::check())
         <div class="container">
             <nav class="breadcrumb">
-                <a href=""{{ route('dashboard') }} class="breadcrumb-item active"> Dashboard</a>
+                <a href="{{ route('dashboard') }}" class="breadcrumb-item active"> Dashboard</a>
                 <a href="{{ route('posts.create') }}" class="breadcrumb-item active"> Create post</a>
             </nav>
     @endif
