@@ -78,11 +78,13 @@
             margin-bottom: 30px;
         }
     </style>
-    <div class="container">
-        <nav class="breadcrumb">
-            <a href=""{{ route('dashboard') }} class="breadcrumb-item active"> Dashboard</a>
-            <a href="{{ route('posts.create') }}" class="breadcrumb-item active"> Create post</a>
-        </nav>
+    @if (Route::has('login') && Auth::check())
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href=""{{ route('dashboard') }} class="breadcrumb-item active"> Dashboard</a>
+                <a href="{{ route('posts.create') }}" class="breadcrumb-item active"> Create post</a>
+            </nav>
+    @endif
 </head>
 
 <body>
