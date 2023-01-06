@@ -5,7 +5,7 @@
          @method('DELETE')
          <input type="hidden" name="post_id" value="{{ $post->id }}" />
 
-         <button type="submit" class="btn btn-danger btn-block">Delete</button>
+         <button type="submit" class="btn btn-danger btn-block">Delete post</button>
      </form>
  @endif
 

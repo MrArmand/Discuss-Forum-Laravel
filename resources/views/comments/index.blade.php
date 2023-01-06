@@ -5,6 +5,6 @@
          @method('DELETE')
          <input type="hidden" name="comment_id" value="{{ $comment->id }}" />
 
-         <button type="submit" class="btn btn-danger btn-block">Delete</button>
+         <button type="submit" class="btn">Delete comment</button>
      </form>
  @endif
