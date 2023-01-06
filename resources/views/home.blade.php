@@ -18,6 +18,7 @@
                                     @foreach ($post->comments as $comment)
                                         <nav class="">
                                             <div class="container">
+                                                @include('comments.index', ['comment' => $comment])
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <div class="card-header"><a

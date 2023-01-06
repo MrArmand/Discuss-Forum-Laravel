@@ -30,6 +30,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/post/create',[PostController::class, 'create'])->name('posts.create');
 Route::post('/dashboard',[PostController::class, 'store'])->name('posts.store');
 Route::delete('/dashboard',[PostController::class, 'destroy'])->name('posts.destroy');
+Route::delete('/dashboard',[CommentController::class, 'destroy'])->name('comments.destroy');
 
 Route::get('user/{name?}', [ProfileController::class, 'show']);
 });
