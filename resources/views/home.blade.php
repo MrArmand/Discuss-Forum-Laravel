@@ -17,7 +17,8 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
-                <div class="card-header"><a href="/user/{{$post->user_id}}">{{$post -> username($post->user_id)}}</a></div>
+                <div class="card-header"><a href="/user/{{$post->user_id}}">{{$post -> username($post->user_id)}}</a>
+                    </div>
                     <div class="card-body">
                      
                     {{ __($post->content) }}
@@ -28,15 +29,20 @@
                         <div class="container">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="card-header"><a href="/user/{{$comment->user_id}}">{{$post -> username($comment->user_id)}}</a></div>
+                                    <div class="card-header"><a href="/user/{{$comment->user_id}}">{{$post -> username($comment->user_id)}}</a>
+                                    </div>
                                     {{($comment->content)}}
                                 </div>
                             </div>
+                           
                         </div>
                     @endforeach
                     @endif
+                   
                     </div>
+                    @include('posts.index', ['post' => $post]) 
                 </div>
+                
                 
 
 
@@ -55,7 +61,7 @@
                             <div class="form-group">
                                <label>Comment</label>
                                {{-- <textarea name="description" class="form-control" required=""></textarea> --}}
-                               <input type="text" name="content" class="form-control" required=""/>
+                               <input type="text" name="content" class="form-control" required="" />
                                 <input type="hidden" name="post_id" value="{{ $post->id }}" />
                             </div>
                           <div class="right">
@@ -67,6 +73,7 @@
             </div>
         </div>
     </div>
+    
 </div>  
 
 @endforeach 

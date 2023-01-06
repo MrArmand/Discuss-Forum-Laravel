@@ -15,12 +15,29 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-
+        $validatedData = $request->validate([
+            'description' => 'required|max:10000'
+        ]);
         $p = new Post;
-        $p->content = $request->description;
+        $p->content = $validatedData['description'];
         $p->user_id = auth()->user()->id;
         $p->save();
 
         return redirect('dashboard')->with('message', 'Post added to the dashboard.');
     }
+
+    public function update(Post $post, Request $request)
+    {
+        
+
+    }
+
+    public function destroy($id)
+    {
+        $post = Post::findOrFail($id);
+        dd($post);
+        $post->delete();
+        return back()->with('success', 'Post deleted!');
+    }
+
 }

@@ -88,6 +88,22 @@
             @endif
     
 
+            @if ($errors->any())
+            <div>
+                Errors:
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li> {{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+            
+            @if (session('message'))
+            <div class="content links">
+                <p><b>{{('SUCCESS: ')}}{{session('message')}}</b></p>
+            </div>
+            @endif
         <main class="py-4">
             @yield('content')
         </main>

@@ -36,8 +36,11 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'content' => 'required|max:10000'
+        ]);
         $c = new Comment;
-        $c->content = $request -> content;
+        $c->content = $validatedData['content'];
         $c->user_id = auth()->user()->id;
         $c->post_id = $request -> post_id;
         $c->save();
