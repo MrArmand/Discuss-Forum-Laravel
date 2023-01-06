@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function(){
 
-Route::post('/dash',[CommentController::class, 'store'])->name('comments.store');
+Route::post('/comments/add',[CommentController::class, 'store'])->name('comments.store');
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
