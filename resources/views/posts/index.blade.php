@@ -1,5 +1,10 @@
  @if ($post->user_id == auth()->user()->id)
-     <form method="post" action="{{ route('posts.destroy') }}">
+     <form action="{{ route('posts.destroy') }}" method="POST">
+         @csrf
+
+         @method('DELETE')
          <input type="hidden" name="post_id" value="{{ $post->id }}" />
-         <a href="{{ route('posts.destroy') }}">Delete post</a>
+
+         <button type="submit" class="btn btn-danger btn-block">Delete</button>
+     </form>
  @endif

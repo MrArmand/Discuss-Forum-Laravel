@@ -32,13 +32,11 @@ class PostController extends Controller
 
     }
 
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        dd($id);
-        $post = Post::findOrFail($id);
+        $post = Post::findOrFail($request -> post_id)->delete();
         
-        $post->delete();
-        return back()->with('message', 'Post has been deleted.');
+        return redirect('dashboard')->with('message', 'Post has been deleted.');
     }
 
 }
