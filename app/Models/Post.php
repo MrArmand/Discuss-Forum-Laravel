@@ -22,6 +22,10 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
+    public function pins(){
+        return $this->hasMany(Pin::class);
+    }
+
     public function username($id){
         $user = User::find($id);
         return $user->name;

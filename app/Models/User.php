@@ -49,4 +49,8 @@ class User extends Authenticatable
     public function comments(){
         return $this->hasMany(Comment::class);
     }
+
+    public function pins(){
+        return $this->hasMany(Pin::class);
+    }
 }

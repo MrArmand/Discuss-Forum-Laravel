@@ -7,8 +7,7 @@
                                                             href="/user/{{ $comment->user_id }}">{{ $post->username($comment->user_id) }}</a>
                                                     </div>
                                                     {{ $comment->content }}
-                                                @include('comments.index', ['comment' => $comment])
-                                                
+                                                @include('comments.index', ['comment' => $comment])                                              
                                             </div>
                                         </div>
                                 @endforeach

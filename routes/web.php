@@ -35,7 +35,7 @@ Route::post('/comments/add',[CommentController::class, 'store'])->name('comments
 Route::delete('/comment/destroy', [CommentController::class, 'destroy'])->name('comments.destroy');
 
 
-
+Route::get('/post/pinned/{id?}', [PostController::class, 'pin']);
 Route::get('/post/edit/{id?}', [PostController::class, 'edit']);
 Route::get('user/{name?}', [ProfileController::class, 'show']);
 });

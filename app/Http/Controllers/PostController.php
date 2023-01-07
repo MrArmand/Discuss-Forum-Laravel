@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Pin;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -52,6 +53,18 @@ class PostController extends Controller
         $post = Post::findOrFail($request -> post_id)->delete();
         
         return redirect('dashboard')->with('message', 'Post has been deleted.');
+    }
+
+    public function pin($id){
+        $user = auth()->user()->id;
+        $post = Post::findOrFail($id);
+
+        $pin = new Pin;
+        $pin->post_id = $post->id;
+        $pin->user_id = auth()->user()->id;
+        $pin->save();
+
+        return redirect('dashboard')->with('message', 'Post has been pinned.');
     }
 
 }
