@@ -8,6 +8,12 @@
         <a href="#">&raquo;</a>
     </div>
 
+    @if (auth()->user()->role == 1)
+        <div class="content links">
+            <p><b>{{("YOU ARE LOGGED AS AN ADMIN.")}}</b></p>
+        </div>
+    @endif
+
     @foreach ($posts as $post)
         @include('pins.show', ['post' => $post])
     @endforeach

@@ -31,9 +31,9 @@
             height: 100vh;
             margin: 0;
         }
-        
-        .btn-inline a{
-             display: inline-block; 
+
+        .btn-inline a {
+            display: inline-block;
         }
 
         .full-height {
@@ -120,7 +120,7 @@
 </head>
 
 <body>
- 
+
     @livewireScripts
 
     @if (Route::has('login') && Auth::check())
@@ -148,7 +148,7 @@
     @endif
 
     @if (session('message'))
-        <div class="content links">
+        <div class="content">
             <p><b>{{ 'SUCCESS: ' }}{{ session('message') }}</b></p>
         </div>
     @endif
@@ -156,11 +156,6 @@
         @yield('content')
     </main>
     </div>
-
- 
-
-
-
 </body>
 
 </html>
