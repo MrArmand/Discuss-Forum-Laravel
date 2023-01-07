@@ -70,7 +70,7 @@ class PostController extends Controller
 
     public function pinDestroy(Request $request)
     {
-        $pin = Pin::findOrFail($request -> id)->delete();
+        $pin = Pin::findOrFail($request -> pin_id)->delete();
         return redirect('dashboard')->with('message', 'Post has been unpinned.');
     }
 

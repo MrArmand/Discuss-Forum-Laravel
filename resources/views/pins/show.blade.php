@@ -11,7 +11,7 @@
                             <form action="{{ route('pins.destroy') }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <input type="hidden" name="post_id" value="{{ $post->id }}" />
+                                <input type="hidden" name="pin_id" value="{{ $pin->id }}" />
 
                                 <button type="submit" class="top-right btn btn-link">Unpin</button>
                             </form>
