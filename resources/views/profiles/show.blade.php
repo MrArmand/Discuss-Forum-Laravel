@@ -6,9 +6,13 @@
         <a href="{{ route('dashboard') }}">Back</a>
     </div>
 
-    <div class="row justify-content-center">
-        <label><blockquote><i>{{ "$user->quote" }}</i></blockquote></label>
-    </div>
+    @if ($user->quote)
+        <div class="row justify-content-center">
+            <label>
+                <blockquote>{{ "$user->name's quote:" }}<i>{{ " $user->quote" }}</i></blockquote>
+            </label>
+        </div>
+    @endif
 
     <div class="row justify-content-center">
         <label>{{ "$user->name's posts" }}</label>

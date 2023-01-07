@@ -115,7 +115,7 @@
             <nav class="breadcrumb">
                 <a href="{{ route('dashboard') }}" class="breadcrumb-item active"> Dashboard</a>
                 <a href="{{ route('posts.create') }}" class="breadcrumb-item active"> Create post</a>
-                <a href="{{ route('posts.create') }}" class="breadcrumb-item active"> My Profile</a>
+                <a href="/user/{{auth()->user()->id }}" class="breadcrumb-item active"> My Profile</a>
             </nav>
     @endif
 </head>
