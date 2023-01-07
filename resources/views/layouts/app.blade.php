@@ -31,6 +31,10 @@
             height: 100vh;
             margin: 0;
         }
+        
+        .btn-inline a{
+             display: inline-block; 
+        }
 
         .full-height {
             height: 100vh;
@@ -50,6 +54,12 @@
             position: absolute;
             right: 10px;
             top: 18px;
+        }
+
+        .top-right-comment {
+            position: absolute;
+            right: 5px;
+            top: 5px;
         }
 
         .right {

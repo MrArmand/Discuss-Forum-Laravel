@@ -30,7 +30,7 @@
                         @method('PATCH')
                         <input type="hidden" name="post_id" value="{{ $post->id }}" />
 
-                        <button type="submit" class="btn btn-danger btn-block">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>

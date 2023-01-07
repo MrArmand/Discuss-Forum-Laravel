@@ -23,7 +23,8 @@ class UserTableSeeder extends Seeder
         $p = new User;
         $p->name = "Armand";
         $p->email = "me@gmail.com";
-        $p->password = "password";
+        $p->password = "itsmemario";
+        $p->role = "1";
         $p->save();
 
         //Number of users

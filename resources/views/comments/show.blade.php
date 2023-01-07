@@ -5,9 +5,10 @@
                                             <div class="card">
                                                     <div class="card-header"><a
                                                             href="/user/{{ $comment->user_id }}">{{ $post->username($comment->user_id) }}</a>
+                                                            @include('comments.index', ['comment' => $comment])  
                                                     </div>
                                                     {{ $comment->content }}
-                                                @include('comments.index', ['comment' => $comment])                                              
+                                                                                            
                                             </div>
                                         </div>
                                 @endforeach
