@@ -9,8 +9,7 @@
     </div>
 
     @foreach ($posts as $post)
-    @if (auth()->user()->id == $post->pin)
-        @include('posts.show', ['post' => $post])
+        @include('pins.show', ['post' => $post])
     @endforeach
 
     @foreach ($posts as $post)

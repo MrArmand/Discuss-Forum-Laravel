@@ -16,8 +16,10 @@ return new class extends Migration
         Schema::create('pins', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('post_id')->unsigned();
+            $table->bigInteger('user_id')->references('id')->on('users')
+            ->onDelete('cascade')->onUpdate('cascade')->unsigned();
+            $table->bigInteger('post_id')->references('id')->on('posts')
+            ->onDelete('cascade')->onUpdate('cascade')->unsigned();
         });
     }
 

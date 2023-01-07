@@ -56,6 +56,7 @@ class PostController extends Controller
     }
 
     public function pin($id){
+
         $user = auth()->user()->id;
         $post = Post::findOrFail($id);
 
@@ -66,5 +67,13 @@ class PostController extends Controller
 
         return redirect('dashboard')->with('message', 'Post has been pinned.');
     }
+
+    public function pinDestroy(Request $request)
+    {
+        $pin = Pin::findOrFail($request -> id)->delete();
+        return redirect('dashboard')->with('message', 'Post has been unpinned.');
+    }
+
+  
 
 }

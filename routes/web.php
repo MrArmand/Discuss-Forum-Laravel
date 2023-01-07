@@ -34,6 +34,7 @@ Route::patch('/post/edited/{id?}', [PostController::class, 'update']);
 Route::post('/comments/add',[CommentController::class, 'store'])->name('comments.store');
 Route::delete('/comment/destroy', [CommentController::class, 'destroy'])->name('comments.destroy');
 
+Route::delete('/post/pinned/destroy', [PostController::class, 'pinDestroy'])->name('pins.destroy');;
 
 Route::get('/post/pinned/{id?}', [PostController::class, 'pin']);
 Route::get('/post/edit/{id?}', [PostController::class, 'edit']);

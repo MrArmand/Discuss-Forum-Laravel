@@ -16,4 +16,10 @@ class Pin extends Model
     public function pinnedPosts(){
         return $this->belongsToMany(Post::class);
     }
+
+    public function username($id){
+        $user = User::find($id);
+        return $user->name;
+
+    }
 }

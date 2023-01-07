@@ -41,4 +41,9 @@ class Post extends Model
         $value = Comment::find($id);
         return $value;
     }
+
+    public function getPost($id){
+        $post = Post::findOrFail($id);
+        return $post;
+    }
 }
