@@ -1,9 +1,9 @@
 <div class="container">
     <div class="col">
         <div class="card">
-            <div class="card-header"><a href="/user/{{ $post->user_id }}">{{ $post->username($post->user_id) }}</a>
+            <div class="card-header bg-primary profile"><a href="/user/{{ $post->user_id }}"><i class="fas fa-user-alt"></i> {{ $post->username($post->user_id) }}</a>
             </div>
-            <div class="top-right links"><a href="/post/pinned/{{ $post->id }}"> Pin to the top
+            <div class="top-right-pin pin"><a href="/post/pinned/{{ $post->id }}"> <i class="fas fa-star"></i>Pin to the top
                 </a>
             </div>
             <div class="card-body">

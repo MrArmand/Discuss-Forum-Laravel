@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="pagination">
-        <a href="#">&laquo;</a>
-        <a href="#"class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">&raquo;</a>
+    <div class="flex-center pagination">
+        <a href="dashboard">&laquo;</a>
+        <a href="dashboard"class="active">1</a>
+        <a href="dashboard">2</a>
+        <a href="dashboard">&raquo;</a>
     </div>
 
     @if (auth()->user()->role == 1)

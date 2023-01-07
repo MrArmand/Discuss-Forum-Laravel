@@ -12,7 +12,7 @@
     @if ($post->user_id == auth()->user()->id)
         <form action="/post/edit/{{ $post->id }}" method="get">
             <input type="hidden" name="post_id" value="{{ $post->id }}" />
-            <button type="submit" class="btn btn-primary btn-block">Edit post</button>
+            <button type="submit" class="btn btn-info btn-block">Edit post</button>
         </form>
     @endif
 </div>

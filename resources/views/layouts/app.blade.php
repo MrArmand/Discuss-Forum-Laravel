@@ -18,6 +18,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
     @livewireStyles
@@ -56,6 +57,12 @@
             top: 18px;
         }
 
+        .top-right-pin {
+            position: absolute;
+            right: 5px;
+            top: 12px;
+        }
+
         .top-right-comment {
             position: absolute;
             right: 5px;
@@ -84,12 +91,38 @@
             text-transform: uppercase;
         }
 
+        .profile>a {
+            color: #ffffff;
+            padding: 0 25px;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .pin>a {
+            color: #ffe600;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            /* outline-style: outset; */
+            outline-color: rgb(255, 255, 255);
+        }
+
+        .comments {
+            color: #89c3e0;
+        }
+
         .m-b-md {
             margin-bottom: 30px;
         }
 
         .pagination {
-            display: inline-block;
+            text-align: center;
         }
 
         .pagination a {
@@ -112,10 +145,10 @@
     </style>
     @if (Route::has('login') && Auth::check())
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="{{ route('dashboard') }}" class="breadcrumb-item active"> Dashboard</a>
-                <a href="{{ route('posts.create') }}" class="breadcrumb-item active"> Create post</a>
-                <a href="/user/{{auth()->user()->id }}" class="breadcrumb-item active"> My Profile</a>
+            <nav class="breadcrumb flex-center ">
+                <a href="{{ route('dashboard') }}" class="breadcrumb-item active"> <i class="fas fa-home"></i>Dashboard</a>
+                <a href="{{ route('posts.create') }}" class="breadcrumb-item active"> <i class="fas fa-hammer"></i> Create post</a>
+                <a href="/user/{{auth()->user()->id }}" class="breadcrumb-item active"> <i class="fas fa-id-card"></i>My Profile</a>
             </nav>
     @endif
 </head>
