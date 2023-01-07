@@ -7,7 +7,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <label>{{ "$user->quote" }}</label>
+        <label><blockquote><i>{{ "$user->quote" }}</i></blockquote></label>
     </div>
 
     <div class="row justify-content-center">
