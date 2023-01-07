@@ -25,6 +25,7 @@ class UserTableSeeder extends Seeder
         $p->email = "me@gmail.com";
         $p->password = "itsmemario";
         $p->role = "1";
+        $p->quote = "GAGAGAGAGAGAGAAG";
         $p->save();
 
         //Number of users

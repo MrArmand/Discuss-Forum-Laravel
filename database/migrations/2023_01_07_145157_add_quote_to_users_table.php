@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('quotes', function (Blueprint $table) {
-
-            $table->id();
-            $table->timestamps();
-            $table->string('quote');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('quote')->default("");
         });
     }
 
@@ -28,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quotes');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('quote');
+        });
     }
 };

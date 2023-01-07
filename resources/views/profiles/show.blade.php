@@ -2,14 +2,18 @@
 
 
 @section('content')
-
     <div class="row justify-content-center">
         <a href="{{ route('dashboard') }}">Back</a>
     </div>
 
     <div class="row justify-content-center">
+        <label>{{ "$user->quote" }}</label>
+    </div>
+
+    <div class="row justify-content-center">
         <label>{{ "$user->name's posts" }}</label>
     </div>
+
 
     @foreach ($posts as $post)
         @if ($post->user_id == $user->id)
@@ -28,5 +32,4 @@
             @endif
         @endforeach
     @endforeach
-    
 @endsection
