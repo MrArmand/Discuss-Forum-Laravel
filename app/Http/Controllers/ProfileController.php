@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Post;
+use App\Http\Container;
+
 class ProfileController extends Controller
 {
     /**
@@ -12,9 +14,10 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Container $c)
     {
       
+        return view('secret.show');
 
     }
 

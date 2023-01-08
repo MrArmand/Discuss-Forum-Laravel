@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
+use App\Http\Container;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,11 +17,17 @@ use App\Http\Controllers\CommentController;
 |
 */
 
+app()->singleton('App\Http\Container', function ($app){
+    return new Container("key");
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::middleware('auth')->group(function(){
+
+Route::get('/secret', [ProfileController::class, 'index']);
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
