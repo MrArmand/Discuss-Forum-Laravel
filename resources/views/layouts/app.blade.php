@@ -121,27 +121,10 @@
             margin-bottom: 30px;
         }
 
-        .pagination {
-            text-align: center;
+        .w-5{
+            display: none;
         }
-
-        .pagination a {
-            color: black;
-            float: left;
-            padding: 8px 16px;
-            text-decoration: none;
-        }
-
-        .pagination a.active {
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-        }
-
-        .pagination a:hover:not(.active) {
-            background-color: #ddd;
-            border-radius: 5px;
-        }
+        
     </style>
     @if (Route::has('login') && Auth::check())
         <div class="container">

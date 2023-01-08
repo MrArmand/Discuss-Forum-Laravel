@@ -66,9 +66,10 @@ class CommentController extends Controller
      * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comment $comment)
+    public function edit($id)
     {
-        //
+        $comment = Comment::find($id);
+        return view('comments.edit', ['comment' => $comment]);
     }
 
     /**
@@ -78,9 +79,20 @@ class CommentController extends Controller
      * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comment $comment)
-    {
-        //
+    public function update($id){
+
+
+        dd($id);
+        request()->validate([
+            'content' => 'required'
+        ]);
+    
+
+        Comment::find($id)->update([
+           'content' => request('content')
+        ]);
+
+        return redirect('dashboard')->with('message', 'Comment has been edited.');
     }
 
     /**
