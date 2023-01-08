@@ -24,7 +24,7 @@
                     Edit Comment
                 </div>
                 <div class="card-body">
-                    <form action="/comments/edit/{{ $comment->id }}" method="post">
+                    <form action="/update/comment/{{ $comment->id }}" method="post">
                         <textarea name="content" class="form-control" required=""></textarea>
                         @csrf
                         @method('PATCH')

@@ -9,7 +9,7 @@
             <button type="submit" class="btn btn-secondary top-right-comment">Delete comll</button>
         </form>
 
-        <form action="/comment/edit/" method="get">
+        <form action="/comment/edit/{{ $comment->id }}" method="get">
             <input type="hidden" name="comment_id" value="{{ $comment->id }}" />
             <button type="submit" class="btn btn-dark top-right-comment">Edit</button>
         </form>

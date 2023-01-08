@@ -81,8 +81,6 @@ class CommentController extends Controller
      */
     public function update($id){
 
-
-        dd($id);
         request()->validate([
             'content' => 'required'
         ]);
