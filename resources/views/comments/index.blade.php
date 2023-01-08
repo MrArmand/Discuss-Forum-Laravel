@@ -6,12 +6,12 @@
             @method('DELETE')
             <input type="hidden" name="comment_id" value="{{ $comment->id }}" />
 
-            <button type="submit" class="btn btn-secondary top-right-comment">Delete comll</button>
+            <button type="submit" class="btn btn-secondary top-right-comment">Delete</button>
         </form>
 
         <form action="/comment/edit/{{ $comment->id }}" method="get">
             <input type="hidden" name="comment_id" value="{{ $comment->id }}" />
-            <button type="submit" class="btn btn-dark top-right-comment">Edit</button>
+            <button type="submit" class="btn btn-dark top-right-edit">Edit</button>
         </form>
 
     </div>

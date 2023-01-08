@@ -57,6 +57,12 @@
             top: 18px;
         }
 
+        .top-right-edit {
+            position: absolute;
+            right: 85px;
+            top: 5px;
+        }
+
         .top-right-pin {
             position: absolute;
             right: 5px;

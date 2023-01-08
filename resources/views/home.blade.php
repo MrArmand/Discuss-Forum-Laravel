@@ -2,7 +2,9 @@
 
 @section('content')
 
-    
+    <div class="flex-center">
+        {{ $posts->links() }}
+    </div>
 
     @if (auth()->user()->role == 1)
         <div class="content links">
