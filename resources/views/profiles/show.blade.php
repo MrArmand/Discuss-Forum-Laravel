@@ -33,6 +33,7 @@
         @foreach ($post->comments as $comment)
             @if ($comment->user_id == $user->id)
                 @include('posts.show', ['post' => $post])
+                @break
             @endif
         @endforeach
     @endforeach
